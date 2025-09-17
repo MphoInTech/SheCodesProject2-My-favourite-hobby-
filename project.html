@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mpho's Hobby 🌎</title>
+    <style>
+      body {
+        background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+      }
+      p {
+        font-size: 15px;
+        line-height: 1.5;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        border: 2px dotted;
+        background: #abc7fa;
+        font-size: 15px;
+        border-radius: 5px;
+        padding: 20px 20px;
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        background: white;
+        cursor: pointer;
+        color: rgb(89, 151, 209);
+      }
+      footer {
+        text-align: center;
+        margin: 0 auto;
+        color: rgb(95, 89, 89);
+        font-size: 15px;
+        font-family: monospace;
+      }
+      .main-content {
+        max-width: 600px;
+        background: white;
+        padding: 20px 20px;
+        margin: 15px auto;
+        border-radius: 10px;
+      }
+      .changeThemeButton {
+        background: black;
+        color: white;
+        font-size: 12px;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 10px;
+        margin: 0 auto;
+        transition: all 200ms ease-in-out;
+      }
+
+      .changeThemeButton:hover {
+        background: white;
+        cursor: pointer;
+        color: black;
+      }
+      .travel-intro-picture {
+        border-radius: 5px;
+        transition: all 200ms ease-in-out;
+      }
+
+      .travel-intro-picture:hover {
+        filter: contrast(80%);
+        transform: scale(1.1);
+      }
+      .grid {
+        margin: 10px 0;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 10px;
+      }
+
+      .grid img {
+        width: 100%;
+        border-radius: 5px;
+        aspect-ratio: 16/9;
+        transition: all 200ms ease-in-out;
+      }
+      .grid img:hover {
+        transform: scale(1.8);
+      }
+      .new-theme {
+        background: linear-gradient(
+          89.7deg,
+          rgb(0, 0, 0) -10.7%,
+          rgb(53, 92, 125) 88.8%
+        );
+        color: white;
+      }
+      .new-theme .main-content {
+        background-color: #344b5f;
+      }
+      .new-theme a {
+        color: rgb(240, 61, 210);
+      }
+      .new-theme button {
+        display: block;
+        margin: 0 auto;
+        border: 2px dotted;
+        background: rgb(255, 255, 255);
+        font-size: 15px;
+        border-radius: 5px;
+        padding: 20px 20px;
+        transition: all 200ms ease-in-out;
+      }
+      .new-theme button:hover {
+        background: rgb(89, 151, 209);
+        cursor: pointer;
+        color: white;
+      }
+      .new-theme footer {
+        color: white;
+      }
+      .new-theme .changeThemeButton {
+        background: white;
+        color: black;
+        font-size: 12px;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 10px;
+        margin: 0 auto;
+        transition: all 200ms ease-in-out;
+      }
+      .new-theme .changeThemeButton:hover {
+        background: black;
+        cursor: pointer;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="changeThemeButton">Change Theme</button>
+    <div class="main-content">
+      <h1>✈️Travelling🗺️</h1>
+      <h2>My favourite hobby</h2>
+      <a href="https://en.wikipedia.org/wiki/Travel" target="_blank">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/173/641/original/travel.jfif?1757706884"
+          alt="Aeroplane"
+          class="travel-intro-picture"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/173/745/original/do_i_need_a_passport.jpg?1757870341"
+          alt="Passport"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/173/742/original/Travel.jpg?1757870010"
+          alt="Scenary"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/173/646/original/230725152449-01-group-friend-vacation-tips-top.jpg?1757709276"
+          alt="Friends travelling together"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/173/744/original/istockphoto-1138159915-612x612.jpg?1757870072"
+          alt="Food"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/173/648/original/planning-for-your-leisure-trips-720x350.jpg?1757709298"
+          alt="Legs out the window"
+        />
+      </div>
+      <p>
+        Travel is the movement of people between distant geographical locations.
+        Travel can be done by foot, bicycle, automobile, train, boat, bus,
+        airplane, ship or other means, with or without luggage, and can be one
+        way or round trip with friends, family or even alone.<br /><br />🤔
+        <a href="https://en.wikipedia.org/wiki/Travel" target="_blank">
+          <em>Learn more about travel</em></a
+        >
+      </p>
+      <button class="join-button">Join the adventure ✨</button>
+    </div>
+    <footer>Coded with 🩷 by Mpho Modise</footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("new-theme")) {
+          body.classList.remove("new-theme");
+        } else {
+          body.classList.add("new-theme");
+        }
+      }
+
+      let newThemeButton = document.querySelector(".changeThemeButton");
+      newThemeButton.addEventListener("click", changeTheme);
+
+      function joinTheAdventure() {
+        let name = prompt("Hello! What is your name ?😁👋🏽");
+        if (!name) return;
+
+        let rating = prompt(
+          "On a scale of 1 to 10, how much did you like my page ?"
+        );
+        if (!rating) return;
+
+        let validRating = Number(rating);
+
+        if (isNaN(validRating) || validRating < 1 || validRating > 10) {
+          alert("Please enter a valid number between 1 and 10. 😊");
+          return;
+        }
+
+        if (validRating < 7) {
+          alert(
+            `Thank you for your honest feedback, ${name}!🫂I really appreciate it and I will keep improving.`
+          );
+        } else {
+          alert(
+            `Thanks for sharing your thoughts, ${name}! Your feedback helps me grow and make things even better.❤️`
+          );
+        }
+      }
+
+      let adventureButton = document.querySelector(".join-button");
+      adventureButton.addEventListener("click", joinTheAdventure);
+    </script>
+  </body>
+</html>
